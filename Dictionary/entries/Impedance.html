@@ -1,0 +1,30 @@
+<div class="short">
+  A measure of the resultant speed of an oscillator when a driving force is applied to it.
+</div>
+<div class="description">
+Consider the standard harmonic oscillator equation $\ddot{x}+\omega_0^2 x = 0$. First, let's make this a bit more reasonable by adding some damping term: $\ddot{x}+\gamma \dot{x}+\omega_0^2 x = 0$. If we apply an harmonic force $Ae^{i\omega t}$, then we are left with the following inhomogeneous equation
+\[
+  \ddot{x}+\gamma \dot{x}+\omega_0 x = Ae^{i\omega t}.
+\]
+Since we are forcing a frequency $\omega$ on the system, let's guess the solution is of the form
+\[
+  x = Ce^{i\omega t}.
+\]
+This makes sense if
+\[
+  C = \frac{A}{i\gamma \omega+\omega_0^2-\omega^2}.
+\]
+In particular, this means that the oscillator will have a speed
+\[
+v = \dot{x} = \frac{i\omega}{i\gamma \omega+\omega_0^2-\omega^2} A e^{i\omega t}
+\]
+we shall refer to the quantity dividing the applied force
+\[
+  Z = \gamma + i\frac{\omega^2-\omega_0^2}{\omega}
+\]
+as the \textit{accoustic impedance} of the system. More generally, the acoustic impedance is defined by
+\[
+  Z \equiv \frac{\text{driving force}}{\text{resultant speed}}
+\]
+where both the driving force and the speed are treated as complex.
+</div>

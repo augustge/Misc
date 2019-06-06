@@ -1,0 +1,130 @@
+
+<!-- TOGGLE DROPDOWNTEXT -->
+<script language="JavaScript" type="text/javascript">
+
+var idVals = [];
+
+// function for deciding whether an array a contains an element obj
+function notContains(a,obj){
+  for(var i=0; i<a.length; i++){if(a[i]===obj){return false;}}
+  return true; }
+
+// function for vizibilizing elements with id theID. All others will be closed
+function openClose(theID) {
+   if (document.getElementById(theID).style.display == "block") {
+    document.getElementById(theID).style.display = "none";
+    document.getElementById('Basic').style.display = "block";
+  }
+   else {
+    document.getElementById(theID).style.display  = "block";
+    document.getElementById('Basic').style.display = "none";
+    var numtrue = 0;
+    for (var i=0; i<idVals.length;i++){
+      if(idVals[i]!=theID){
+        document.getElementById(idVals[i]).style.display = "none";
+      }
+    }
+  }
+
+  if(notContains(idVals,theID)){idVals.push(theID);}
+}
+</script>
+
+
+
+
+
+<HTML>
+   <HEAD>
+      <TITLE>AUGUST GEELMUYDEN</TITLE>
+
+      <!-- css file -->
+      <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+      <!-- MATHJAX for latex display -->
+      <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+      <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <!-- for unicode utf-8 display -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <META name="author" content="August Geelmuyden">
+
+      <!--  P5.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.js"></script>
+
+   </HEAD>
+   <BODY>
+
+
+<!--
+     <h1 class="title">August Geelmuyden</h1> -->
+     <div class="">
+
+
+    <ul class="topnav">
+     <a class="active" href="#home">Home</a>
+     <a href="#news">News</a>
+     <a href="#contact">Contact</a>
+     <a href="#about">About</a>
+    </ul>
+
+    <div id='myContainer'></div>
+    <script src="script.js"></script>
+
+     <blockquote>
+       Euclid taught me that without assumptions there is no proof. Therefore, in any
+       argument, examine the assumptions.
+       <cite>E. T. Bell</cite>
+     </blockquote>
+
+      <div id="emptyDiv">
+
+      </div>
+
+      <h2 class="topic">Pages</h2>
+
+      <div class="container">
+        <a class='menuElement box' href='PAGE1'>PAGE1</a>
+        <a class='menuElement box' href='PAGE2'>PAGE2</a>
+        <a class='menuElement box' href='PAGE3'>PAGE3</a>
+        <a class='menuElement box' href='PAGE4'>PAGE4</a>
+      </div>
+
+
+
+      <h2 class="topic">Texts</h2>
+      <div class="container" id="tekstMenu">
+        <a class="box" onClick="openClose(\'a'.(string)$j.'\')" style="cursor:hand; cursor:pointer;">TOPIC1</a>
+        <a class="box" onClick="openClose(\'a'.(string)$j.'\')" style="cursor:hand; cursor:pointer;">TOPIC2</a>
+        <a class="box" onClick="openClose(\'a'.(string)$j.'\')" style="cursor:hand; cursor:pointer;">TOPIC3</a>
+        <a class="box" onClick="openClose(\'a'.(string)$j.'\')" style="cursor:hand; cursor:pointer;">TOPIC4</a>
+      </div>
+
+
+    <ul id="messageList">
+      <div id='Basic' class="texter" style="display: block;">
+        <p class="image" id="showImg"><img src="Animations/biljards2.gif" width='80%' height='70%'><p>
+          </div>
+    </ul>
+
+
+
+
+
+
+
+
+
+   </BODY>
+<!--
+   <footer>
+    <p>Posted by: August Geelmuyden</p>
+    <p>Contact information: <a href="mailto:someone@example.com">
+    someone@example.com</a>.</p>
+  </footer> -->
+
+</HTML>

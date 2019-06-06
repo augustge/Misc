@@ -1,0 +1,92 @@
+
+I matematikk snubler man ofte over likninger som ser fullstendig uløselige ut. Et eksempel er følgende likning
+
+$$ x=\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+...}}}}}}} $$
+
+Merkelig nok gjør det faktum at mønsteret på høyre side fortsetter til uendelig at denne likningen er lett å løse. Vi kan ta kvadratet av begge sider for å få
+
+$$ x^2=x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+...}}}}}}} $$
+
+Ved nå å trekke fra <i>x</i> på begge sider kan vi studere det som er igjen på høyresiden
+
+$$ x^2-x=\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+...}}}}}}} $$
+
+det som står på høyresiden er nemlig det samme som det vi startet med. Det må altså fremdeles være sant at dette kan kalles for <i>x</i>. Vi får altså
+
+$$ x^2-2x=0 $$
+
+som løses av
+
+$$ x=0 \mbox{ og } x=2. $$
+
+Vi kunne forutsett $x=0$, mens $x=2$ er litt mer overraskende. Funksjonen
+
+$$ f(x)=\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+...}}}}}}} $$
+
+tilfredsstiller altså
+
+$$ f(0)=0 \mbox{ og } f(2)=2. $$
+
+La oss finne de andre verdiene ved å gjenta trikset over. Det gir
+
+$$ f(x)^2-f(x)-x=0 $$
+
+Problemet er at mange av disse verdiene ikke gir mening.
+Først og fremst må vi forkaste alle de negative løsningene – de er et resultat av at vi var
+nødt til å kvadrere begge sider av likhetstegnet i utledningen over. plotter vi funksjonen får vi altså følgende figur:
+
+<img id="IMG" src="notShow_TAG1_Rot_med_kvadratrot.png">
+
+Det er fortsatt problemer med negative x-verdier. Grunnen til dette ligger i at vi nokså upresist har fortalt at funksjonen fortsetter mot uendelig ved å sette tre prikker (<i>...</i>).
+En mer rigid måte å definere funksjonen på vil være ved hjelp av rekker. Vi sier at
+
+$$ z_{n+1}=x+\sqrt{z_n} $$
+
+og ser at grenseverdien når
+<span lang="latex"> n\rightarrow \infty</span>
+er
+
+$$ f(x)=\lim_{n \rightarrow \infty} z_n = \sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+...}}}}}}} $$
+
+Vi fant at $f(0)=0$. Det må bety at $z_0=0$ siden
+
+$$ f(0)= \lim_{n\rightarrow \infty}=\sqrt[n]{z_0}=1 \mbox{ for } z_0>0 $$
+
+Videre kan ikke funksjonen $f(x)$ ta negative $x$-verdier ettersom vi da ville fått kvadratrøtter av negative tall,
+noe som ville vist seg å være problematisk. Vi har altså funnet at tallene er gitt av
+
+$$
+    \sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+...}}}}}}= \begin{cases} \frac{1}{2}+\frac{1}{2}\sqrt{1+4x} & \mbox{ for } x>0 \\ 0 & \mbox{ for } x=0 \end{cases}
+$$
+
+Det er veldig overraskende denne uendelige sekvensen av kvadratrøtter av kvadratrøtter skal bli et heltall
+
+$$
+    \sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2+...}}}}}}=2
+$$
+
+Det kan da være interessant å hvilke <i>x</i>-verdier som vil gi heltall for </i>f(x)</i>. Også det er ganske lett å finne ut. Vi begynner med å sette uttrykket lik et positivt heltall n:
+
+$$
+    n=\frac{1}{2}+\frac{1}{2}\sqrt{1+4x}
+$$
+
+vi multipliserer med 2, trekker fra 1 og kvadrerer begge sider:
+
+$$
+1+4x=4n^2-4n+1 \mbox{ som gir } x = n(n-1)
+$$
+
+Altså er $f(x)$ et heltall dersom $x$
+kan skrives som et produkt av to naboheltall:
+
+$$
+\begin{aligned}
+    f(1\cdot 2)&=f(2) =2 \\
+    f(2\cdot 3)&=f(6) =3 \\
+    f(3\cdot 4)&=f(12)=4 \\
+    f(4\cdot 5)&=f(20) =5 \\
+    \vdots \ \ \ \ \vdots \ \ \ \  &= \ \ \ \  \vdots \ \ \ \  \vdots \\
+    f((n-1)n)&=f(n^2-n)=n \\
+\end{aligned}
+$$

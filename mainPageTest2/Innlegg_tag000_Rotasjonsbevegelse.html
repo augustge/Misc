@@ -1,0 +1,183 @@
+
+
+<h2>Definisjon og bevaring</h2>
+
+Newtons andre lov konstaterer at summen av kreftene $\mathbf{F}$ som virker på et legeme med masse $m$ er lik
+legemets endring i bevegelsesmengde $\mathbf{p}=m\mathbf{v}$ over tid. Dette kan skrives
+\[
+\mathbf{F}=\frac{d\mathbf{p}}{dt}.
+\]
+Dersom legemet har massesenter $\mathbf{r}$ kan vi, helt umotivert, dermed også skrive
+\[
+\mathbf{r}\times\mathbf{F}=\mathbf{r}\times\frac{d\mathbf{p}}{dt}.
+\]
+Siden produktregelen for derivasjon gir
+\[
+\frac{d}{dt}\left( \mathbf{r}\times \mathbf{p} \right)
+=
+\frac{d\mathbf{r}}{dt}\times\mathbf{p}
++
+\mathbf{r}\times\frac{d\mathbf{p}}{dt}
+\]
+og $\frac{d\mathbf{r}}{dt}=\mathbf{v}$ er parallell med $\mathbf{p}$ følger det at
+\[
+\frac{d}{dt}\left( \mathbf{r}\times \mathbf{p} \right)
+=
+\mathbf{r}\times\frac{d\mathbf{p}}{dt}.
+\]
+Med andre ord kan vi skrive
+\[
+\mathbf{r}\times\mathbf{F}=\frac{d}{dt}\left( \mathbf{r}\times \mathbf{p} \right).
+\]
+I situasjoner der $\mathbf{r}\times\mathbf{F}=0$ vil vektorstørrelsen $\mathbf{r}\times \mathbf{p}$
+altså ikke endre seg over tid -- den er bevart! Siden slike størrelser har en tendens til å være veldig nyttige bør vi kalle
+denne størrelsen for noe. Det her vanlig å bruke begrepet <i>angulærmoment</i> og symbolet
+$\mathbf{L}=\mathbf{r}\times \mathbf{p}$. Den vektoren som er null når angulærmomentet er vanligvis kalt
+<i>kraftmoment</i> eller <i>dreiemoment</i> og symbolet $\mathbf{\tau}=\mathbf{r}\times\mathbf{F}$.
+<br>
+    Legg merke til at siden denne størrelsen er avhengig av posisjonen $\mathbf{r}$ vil den endre seg, og kanskje ikke være bevart,
+dersom man ønsker å bytte referansesystem. Legg også merke til at dersom du har et system av $N$
+punktmasser $\{m_i\}_{i=1}^N$ med posisjoner $\{\mathbf{r}_i\}_{i=1}^N$ kan alle likningene legges sammen slik at
+\[
+\sum_i \mathbf{r}_i\times\mathbf{F}_i=\frac{d}{dt}\left( \sum_i \mathbf{r}_i\times \mathbf{p}_i \right).
+\]
+Dette betyr at det gir mening å summére både angulærmoment og kraftmoment. Det betyr også at det totale angulærmomentet
+$\mathbf{L}=\sum_i \mathbf{L}_i$ er bevart dersom det totale kraftmomentet $\mathbf{\tau}=\sum_i \mathbf{\tau}_i$ er null.
+
+
+<p id="image"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Torque_animation.gif">
+<p>
+
+
+<h2>Rotasjon om seg selv</h2>
+La oss nå si at vi har et rigid legeme bestående av $N$ forskjellige punktmasser $\{m_i\}_{i=1}^N$ med
+posisjoner $\{\mathbf{r}_i\}_{i=1}^N$ sett fra massesenteret
+\[
+\mathbf{R}=\frac{1}{m}\sum_i m_i \mathbf{r}_i
+\mbox{ der }
+m=\sum_i m_i.
+\]
+Vi antar videre at dette legemet roterer med vinkelhastighet $\omega$ om en rotasjonsakse som er parallel med $z$-aksen
+og som går gjennom massesenteret $\mathbf{R}$. Hastigheten til ethvert punkt i legemet kan altså skrives $v=\omega s$, der $s$
+er avstanden fra legemet til rotasjonsaksen. Selv om det blir vanskelig å uttrykket angulærmomentet i sin helhet,
+kan vi forsøke å uttrykke $z$-komponenten
+\[
+L_z =  \sum_i \left( \mathbf{r}_i \times \mathbf{p}_i \right)_z.
+\]
+Siden det for alle vektorer $\mathbf{a}$, $\mathbf{b}$ som utspenner en vinkel $\theta$ er sant at
+$\mathbf{a}\times \mathbf{b} = a b \sin (\theta )\mathbf{n}$, der $\mathbf{n}$ er en retningsvektor med enhets lengde,
+kan vi skrive $\mathbf{r}_i \times \mathbf{p}_i=r_ip_i\sin (\theta_i) \mathbf{n}_i$. Dersom alle punktmassene
+går i sirkelbane rundt rotasjonsaksen står $\mathbf{r}_i$ og $\mathbf{p}_i$ vinkelrett på hverandre og dermed
+$\sin (\theta_i)=1$. Det betyr at
+\[
+\sum_i \left( \mathbf{r}_i \times \mathbf{p}_i \right)_z
+=
+\sum_i  r_i p_i \sin (\theta_i) \left(\mathbf{n}_i \right)_z
+=
+\sum_i  r_i p_i \left(\mathbf{n}_i \right)_z.
+\]
+Siden $\left(\mathbf{n}_i \right)_z=\mathbf{n}\cdot \mathbf{e}_z$ ser vi videre at
+$\left(\mathbf{n}_i \right)_z=\cos \phi_i$, der $\phi_i$ er vinkelen mellom vektoren som står normalt på vektorene
+$\mathbf{r}_i$ og $\mathbf{p}_i$, og $z$-aksen. Ved nærmere ettertanke ser vi at $r_i \cos \phi_i = s_i$ der $s_i$
+er avstanden fra $z$_aksen til punktmassen. Altså har vi at
+\[
+\sum_i  r_i p_i \left(\mathbf{n}_i \right)_z
+=
+\sum_i  r_i p_i \cos \phi_i
+=
+\sum_i  s_i p_i.
+\]
+Ved videre å bruke at $p_i = m_i v_i$ og $v_i=\omega s_i$ ser vi at
+\[
+\sum_i  s_i p_i
+=
+\sum_i  s_i m_i v_i
+=
+\sum_i  \omega s_i^2 m_i.
+\]
+Siden $\omega$ er den samme for alle punktmassene kan vi nå skrive
+\[
+L_z = \omega \left( \sum_i s_i^2 m_i \right).
+\]
+
+Størrelsen $I=\sum_i s_i^2 m_i$ er en svært viktig størrelse kalt for <i>treghetsmoment</i>. Før vi
+studerer egenskapene til treghetsmomentet bør vi imidletid undersøke hva vi akkurat har oppdaget. Vi kan
+altså uttrykke den komponenten av angulærmomentet som peker langs rotasjonsaksen ved
+\[
+L_z = \omega I.
+\]
+Dersom ingen kraftmoment virker på legemet ser det altså ut til at den eneste måten å endre rotasjonshastigheten
+$\omega$ på er ved å endre treghetsmomentet $I$. For å doble vinkelhastigheten $\omega$ må treghetsmomentet
+$I$ halveres, og omvendt.
+
+
+<p id="image"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/ButterSideUp.gif">
+<p>
+
+<h2>Treghetsmoment</h2>
+
+Treghetsmomentet til et legeme er mål på hvor vanskelig er det å få legemet til å rotere om en bestemt akse.
+Legg merke til at treghetsmomentet alltid er definert i forhold til en bestemt rotasjonsakse. At dette gir mening
+kan vi overbevise oss om ved å tenke på en tynn lang stokk. Dersom stokken roteres om en akse som går gjennom
+massesenteret og står normalt på stokken vil det kreve mye kraft å igangsette rotasjonen. Dersom rotasjonsaksen
+roteres slik at den ligger langs stokken vil det være mye lettere å få stokken til å rotere.
+<br>
+    Treghetsmomentet for en rotasjonsakse $a$ til et legeme som består av punktmasser $\{m_i\}$ er altså
+gitt av uttrykket
+\[
+I = \sum_i s_i^2 m_i,
+\]
+der $s_i$ er punktmassens avstand til rotasjonsaksen. Selv om verden kanskje bygget opp av punktmasser, kalt
+partikler, fremstår ting for oss som kontinuerlige. Hvordan kan vi finne treghetsmomentet til en kule?
+<br>
+    I stedet for å dele opp den totale massen i punktmasser $m_i$ kan vi dele legemets masse i små biter
+$\Delta m$. I grensen der disse bitene blir uendelig små kan vi gjenkjenne Riemann integralet
+\[
+I = \lim_{\Delta m \rightarrow 0} \sum_i s_i^2 \Delta m = \int_m s^2 dm.
+\]
+Ofte er det enklere å beregne treghetsmomentet ved å utføre substitusjonen $\rho V = m$ og anta at massetettheten
+$\rho$ er konstant i hele legemet. Eksempelvis er treghetsmomentet for en rotasjonsakse står vinkelrett på, og går
+gjennom massesenteret til, en uendelig tynn, sylinderformet stav med lengde L gitt ved
+\[
+\begin{aligned}
+I_{CM}
+&= \int_m s^2 dm
+ = \int_V s^2 \rho dV \\
+&= A\rho \int_{-\frac{1}{2}L}^{\frac{1}{2}L} x^2 dx
+ = A\rho \frac{2}{3}\left(\frac{1}{2}L\right)^3 \\
+&= A\rho \frac{L^3}{12}
+ = \frac{mL^2}{12}.
+\end{aligned}
+\]
+
+Ettersom treghetsmomentet avhenger av rotasjonsaksen kan det være hensiktsmessig å studere nøyaktig hva som
+skjer med treghetsmomentet når aksen flyttes. Dersom et legemes rotasjon rundt en spesifikk akse har treghetsmoment $I_0$,
+hva er treghetsmomentet $I$ dersom aksen forskyves med $\mathbf{r}_0$?
+\[
+\begin{aligned}
+I
+&= \int (\mathbf{s}-\mathbf{r}_0)^2 dm
+ = \int \mathbf{s}^2 dm- \int 2\mathbf{s}\cdot\mathbf{r}_0 dm + \int \mathbf{r}_0^2 dm \\
+&= I_0 - 2\mathbf{r}_0 \cdot \int \mathbf{s} dm + \mathbf{r}_0^2 \int  dm
+ = I_0 - 2\mathbf{r}_0 \cdot m\mathbf{R}' + m r_0^2
+\end{aligned}
+\]
+der $\mathbf{R}'$ er massesenteret projeksjon på $xy$-planet. Dette betyr at hvis den opprinnelige
+rotasjonsaksen gikk gjennom massesenteret $CM$, så må $\mathbf{R}'=0$ og dermed
+\[
+I = I_{CM} + m r_0^2.
+\]
+Dette resultatet kalles gjerne for <i>Parallell-akse-teoremet</i>. Legg merke til at siden $mr_0^2$ aldri kan
+bli negativt kan treghetsmomentet aldri bli mindre enn når rotasjonsaksen går gjennom legemets
+massesenter.
+
+
+<p id="image"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Rolling_Racers_-_Moment_of_inertia.gif">
+<p>
+
+
+
+
+
+
+

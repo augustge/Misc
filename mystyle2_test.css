@@ -1,0 +1,10 @@
+
+
+.fish {
+  color: red;
+}
+
+.fish:hover {
+  color: blue;
+  transition: 1s;
+}

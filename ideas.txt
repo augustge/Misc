@@ -1,0 +1,29 @@
+
+
+IDEAS FOR PROJECTS
+
+### Fractals
+  choose iterations
+  line, triangle, square, etc
+
+### Galaxy formation
+  draw mass density field approximated by lattice
+  Newtonian gravity acts on mass of each lattice point
+  * radiation pressure
+  * clumping into larger objects
+  * luminous vs dark
+
+### Action
+  Animate motion along discretized paths
+  show "clock" to visualize action along the path
+
+
+
+
+
+
+
+
+
+
+#
